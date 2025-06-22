@@ -1,0 +1,71 @@
+@use 'variables' as var;
+
+.header {
+  padding-top: 2.81vw;
+  display: flex;
+  align-items: center;
+  font-size: 0.52vw;
+
+  &__logo {
+    display: flex;
+    position: relative;
+    align-items: center;
+
+    &-icon {
+      width: 9.1em;
+      height: 3.5em;
+    }
+
+    &-text {
+      font-family: var.$first-font;
+      font-weight: 800;
+      font-size: 3.5em;
+      color: #000;
+      margin-left: 0.3em;
+
+      &::after {
+        content: "\00AE";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 100%;
+        font-weight: 300;
+        font-size: 0.7em;
+      }
+
+      &--upper {
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &__menu-btn {
+    background: transparent;
+    border: none;
+    font-family: var.$first-font;
+    font-weight: 400;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: var.$black-color;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    font-size: 1vw;
+    padding-top: 5.4vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    font-size: 2.09vw;
+    padding-top: 2em;
+
+    &__logo-text {
+      display: none;
+    }
+  }
+}

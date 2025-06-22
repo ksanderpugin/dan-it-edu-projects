@@ -122,7 +122,7 @@ button#explore_btn::after {
     display: block;
     width: 10px;
     height: 7px;
-    background-image: url(/images/icons/button-arrow.svg);
+    background-image: url(./images/icons/button-arrow.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -163,7 +163,7 @@ button#explore_btn::after {
 .search-field > button {
     width: 34px;
     height: 34px;
-    background: #0F8277 url(/images/icons/search-icon.svg) no-repeat;
+    background: #0F8277 url(./images/icons/search-icon.svg) no-repeat;
     background-position: center center;
     border: none;
     border-left: 1px solid #5c5c5c;
@@ -194,7 +194,7 @@ button#explore_btn::after {
     border-radius: 12px;
     padding: 170px 674px 184px 110px;
     box-sizing: border-box;
-    background: #dbf3ed url(/images/hero-img.png) no-repeat;
+    background: #dbf3ed url(./images/hero-img.png) no-repeat;
     background-size: 526px 533px;
     background-position: top 39px right 54px;
 }
@@ -267,7 +267,7 @@ button#explore_btn::after {
 
 .program-grid > .card > footer {
     padding-left: 36px;
-    background-image: url(/images/icons/diploma-icon.svg);
+    background-image: url(./images/icons/diploma-icon.svg);
     background-size: contain;
     background-position: center left;
     background-repeat: no-repeat;
@@ -309,7 +309,7 @@ button#explore_btn::after {
     right: -36px;
     width: 36px;
     height: 20px;
-    background-image: url(/images/icons/right-arrow.svg);
+    background-image: url(./images/icons/right-arrow.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center right;
@@ -551,7 +551,7 @@ button#explore_btn::after {
 
 /* Contact Us Form Section */
 .contact-us-form-section {
-    background-image: url(/images/contact-us-bg.png);
+    background-image: url(./images/contact-us-bg.png);
     background-size: cover;
     background-position: center;
 }

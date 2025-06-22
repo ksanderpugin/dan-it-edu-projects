@@ -1,0 +1,134 @@
+@use 'variables' as var;
+
+.what-i-do-section {
+    display: flex;
+    border-bottom: 1px solid var.$black-color;
+
+    &__image {
+        width: 51%;
+        background: url(/images/what-i-do-bgd.jpg) center no-repeat;
+        background-size: cover;
+    }
+
+    &__content {
+        width: 49%;
+        padding: 3.65vw 3.65vw 3.65vw 5.78vw;
+        box-sizing: border-box;
+
+        &-title {
+            font-family: var.$first-font;
+            font-weight: 300;
+            font-size: 7.81vw;
+            text-transform: uppercase;
+            color: var.$black-color;
+            white-space: nowrap;
+        }
+
+        &-list {
+            margin-top: 5.21vw;
+
+            &-item {
+                padding: 2.08vw 0;
+                font-size: 1.04vw;
+                border-bottom: 1px solid var.$black-color;
+
+                &:first-child {
+                    padding-top: 0;
+                }
+
+                &:last-child {
+                    padding-bottom: 0;
+                    border-bottom: none;
+                }
+
+                @for $i from 1 through 4 {
+                    &:nth-child(#{$i}) {
+                        > h3::before {
+                            content: '0' + #{$i} + ' ';
+                        }
+                    }
+                }
+
+                &-title {
+                    font-family: var.$first-font;
+                    font-weight: 600;
+                    font-size: 2.2em;
+                    line-height: 109%;
+                    text-transform: uppercase;
+                    color: #000;
+
+                    &::before {
+                        // content: '01 ';
+                        font-family: inherit;
+                        font-weight: 400;
+                        font-size: inherit;
+                    }
+                }
+
+                &-text {
+                    font-family: var.$second-font;
+                    font-weight: 400;
+                    font-size: 1em;
+                    line-height: 140%;
+                    color: #000;
+                    margin-top: 0.5em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .what-i-do-section {
+        display: block;
+
+        &__image {
+            width: 100%;
+            padding-bottom: 100%;
+        }
+
+        &__content {
+            width: 100%;
+            padding: 4vw;
+
+            &-title {
+                font-size: 15vw;
+                text-align: center;
+            }
+
+            &-list {
+                margin-top: 4vw;
+
+                &-item {
+                    font-size: 2vw;
+                    padding: 4vw 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .what-i-do-section {
+
+        &__content {
+            
+            &-title {
+                font-size: 16vw;
+            }
+
+            &-list {
+                margin-top: 8vw;
+
+                &-item {
+                    font-size: 4.4vw;
+                    padding: 6vw 0;
+
+                    &-title {
+                        font-size: 1.75em;
+                    }
+                }
+            }
+        }
+    }
+}

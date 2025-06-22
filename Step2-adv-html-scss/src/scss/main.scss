@@ -1,0 +1,191 @@
+// * Це головний sass/scss файл проекту
+// * імпортуйте сюди всі інші ваші файли sass/scss
+
+@use 'gilroy-font';
+@use 'reset';
+
+@use 'variables' as var;
+
+@use 'header';
+@use 'about-me';
+@use 'logos';
+@use 'what-i-do';
+@use 'selected-work';
+@use 'my-clients';
+@use 'our-team';
+@use 'contact';
+@use 'footer';
+
+.wrapper {
+    padding-left: 3.65vw;
+    padding-right: 3.65vw;
+}
+
+@mixin title-font {
+    font-family: var.$first-font;
+    font-size: 7.8vw;
+    text-align: center;
+    color: var.$black-color;
+}
+
+.main-title {
+    @include title-font;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 3.85vw;
+}
+
+.main-subtitle {
+    @include title-font;
+    font-weight: 300;
+    text-transform: capitalize;
+    padding-bottom: 2.08vw;
+
+    &::after {
+        content: "";
+        background: url('data:image/svg+xml,<svg width="28" height="42" viewBox="0 0 28 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 38.3625L14 1" stroke="%23252525" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" /><path d="M1.5459 28.5458L14.0001 41L26.4542 28.5458" stroke="%23252525" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" /></svg>') center no-repeat;
+        background-size: contain;
+        display: block;
+        height: 2.08vw;
+        margin-top: 1.56vw;
+    }
+}
+
+.section-title {
+    font-family: var.$first-font;
+    font-weight: 300;
+    font-size: 11vw;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var.$black-color;
+    // white-space: nowrap;
+}
+
+// black button block
+.button-with-arrow {
+    font-family: var.$first-font;
+    font-weight: 400;
+    font-size: 0.94vw;
+    line-height: 1.17em;
+    text-transform: capitalize;
+    color: #fff;
+    background-color: var.$black-color;
+    padding: 0.85em 1.66em;
+    border-radius: 1.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55em;
+
+    &::after {
+        content: "";
+        background: url('data:image/svg+xml,<svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 8.66602L1 8.66602" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" /><path d="M15.7451 15.333L22.4118 8.66634L15.7451 1.99967" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" /></svg>') center no-repeat;
+        background-size: contain;
+        display: block;
+        width: 1.17em;
+        height: 1.17em;
+    }
+}
+
+// socials block
+.socials {
+    display: flex;
+    font-size: 0.52vw;
+    gap: 1em;
+    justify-content: flex-end;
+
+    &__link {
+        display: block;
+        width: 3em;
+        height: 3em;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &--facebook {
+            background-image: url(/images/socials/facebook_black.svg);
+        }
+
+        &--twitter {
+            background-image: url(/images/socials/twitter_black.svg);
+        }
+
+        &--linkedin {
+            background-image: url(/images/socials/linkedin_black.svg);
+        }
+
+        &--dribble {
+            background-image: url(/images/socials/dribble_black.svg);
+        }
+    }
+}
+
+// responcive
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+
+    .main-title {
+        font-size: 12vw;
+        margin-top: 7.4vw;
+    }
+
+    .main-subtitle {
+        font-size: 12vw;
+        padding-bottom: 4vw;
+
+        &::after {
+            height: 4vw;
+            margin-top: 3vw;
+        }
+    }
+
+    .section-title {
+        font-size: 15vw;
+    }
+
+    .button-with-arrow {
+        font-size: 1.8vw;
+    }
+
+    .socials {
+        font-size: 1vw;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        padding-left: 4.18vw;
+        padding-right: 4.18vw;
+    }
+
+    .main-title {
+        margin-top: 6.28vw;
+    }
+
+    .main-subtitle {
+        padding-bottom: 2.93vw;
+
+        &::after {
+            height: 8.37vw;
+            margin-top: 6.28vw;
+        }
+    }
+
+    .section-title {
+        font-size: 16vw;
+    }
+
+    .button-with-arrow {
+        font-size: 3.76vw;
+    }
+
+    .socials {
+        font-size: 2.09vw;
+    }
+}
+

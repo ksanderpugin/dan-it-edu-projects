@@ -1,0 +1,44 @@
+@use 'variables' as var;
+
+.footer {
+    padding: 1.3vw 3.65vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__text {
+        font-family: var.$first-font;
+        font-weight: 400;
+        font-size: 0.94vw;
+        color: var.$darkgrey-color;
+
+        &--bold {
+            font-weight: 600;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .footer {
+        padding: 4.5vw 3vw;
+
+        &__text {
+            font-size: 1.8vw;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .footer {
+        padding: 4.18vw;
+        flex-direction: column;
+        align-items: center;
+        gap: 4.18vw;
+
+        &__text {
+            font-size: 3.76vw;
+        }
+    }
+}

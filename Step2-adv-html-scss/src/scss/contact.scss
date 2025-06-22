@@ -1,0 +1,90 @@
+@use 'variables' as var;
+
+.contact {
+    padding: 5.2vw 3.65vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.08vw;
+    border-bottom: 1px solid var.$black-color;
+
+    &__title {
+        font-family: var.$first-font;
+        font-weight: 300;
+        font-size: 8.07vw;
+        text-transform: uppercase;
+        color: var.$darkgrey-color;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: var.$black-color;
+        font-family: var.$first-font;
+        gap: 3.12vw;
+
+        &-title {
+            font-weight: bold;
+            font-size: 3.33vw;
+            text-transform: uppercase;
+        }
+
+        &-text {
+            font-weight: 400;
+            font-size: 1.77vw;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    
+    .contact {
+        padding: 3vw;
+        padding-bottom: 5vw;
+        display: block;
+
+        &__title {
+            font-size: 15vw;
+            margin-bottom: 4vw;
+            text-align: center;
+        }
+
+        &__content {
+            align-items: center;
+            text-align: center;
+            gap: 3vw;
+
+            &-title {
+                font-size: 6.4vw;
+            }
+
+            &-text {
+                font-size: 3.4vw;
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 768px) {
+    .contact {
+        padding: 6.27vw 4.18vw 10.46vw 4.18vw;
+
+        &__title {
+            font-size: 16vw;
+            margin-bottom: 6.27vw;
+        }
+
+        &__content {
+            gap: 6.27vw;
+            align-items: stretch;
+
+            &-title {
+                font-size: 10.46vw;
+            }
+
+            &-text {
+                font-size: 6.27vw;
+            }
+        }
+    }
+}

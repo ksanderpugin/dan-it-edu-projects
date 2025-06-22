@@ -1,0 +1,37 @@
+@use 'variables' as var;
+
+.logos {
+  padding-top: 3.65vw;
+  padding-bottom: 3.65vw;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var.$black-color;
+
+  &__item {
+    padding: 0 40px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 35px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .logos {
+    gap: 20px;
+    padding-top: 4vw;
+    padding-bottom: 4vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logos {
+    padding-top: 6.28vw;
+    padding-bottom: 6.28vw;
+  }
+}

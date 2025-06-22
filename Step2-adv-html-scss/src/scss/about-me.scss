@@ -1,0 +1,132 @@
+@use 'variables' as var;
+
+.offer {
+  position: relative;
+  padding-bottom: 59%;
+
+  &__image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.about-me {
+  padding: 4.48vw 0 4.48vw 3.65vw;
+  font-size: 0.52vw;
+  display: flex;
+  align-items: center;
+  gap: 7em;
+  border-bottom: 1px solid var.$black-color;
+
+  &__text {
+    font-family: var.$first-font;
+    font-weight: 300;
+    font-size: 6.2em;
+    color: var.$black-color;
+
+    > b {
+      font-weight: 800;
+    }
+  }
+
+  &__social {
+    padding: 3.13vw 3.65vw 3.13vw 8.07vw;
+    background-color: var.$black-color;
+
+    &-title {
+      font-family: var.$first-font;
+      font-weight: 400;
+      font-size: 3.2em;
+      line-height: 100%;
+      text-transform: uppercase;
+      text-align: right;
+      color: #fff;
+      margin-bottom: 1em;
+    }    
+
+    &-icons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 2em;
+
+      &-link {
+        display: block;
+        width: 5em;
+        height: 5em;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        &--facebook {
+          background-image: url(/images/socials/facebook_white.svg);
+        }
+
+        &--twitter {
+          background-image: url(/images/socials/twitter_white.svg);
+        }
+
+        &--linkedin {
+          background-image: url(/images/socials/linkedin_white.svg);
+        }
+
+        &--dribble {
+          background-image: url(/images/socials/dribble_white.svg);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .offer {
+    padding-bottom: 96.5%;
+  }
+
+  .about-me {
+    flex-direction: column;
+    padding: 0;
+    align-items: stretch;
+    font-size: 1vw;
+    gap: 0;
+
+    &__text {
+      padding: 3vw;
+      text-align: center;
+      font-size: 5.2em;
+    }
+
+    &__social {
+      padding: 4vw 3vw;
+      gap: 3vw;
+
+      &-title {
+        font-size: 2.8em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .offer {
+    padding-bottom: 133.5%;
+  }
+
+  .about-me {
+    font-size: 2.09vw;
+
+    &__text {
+      padding: 1em 0.66em;
+      font-size: 3em;
+    }
+
+    &__social {
+      padding: 4em 3em;
+      gap: 3em;
+    }
+  }
+}
