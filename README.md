@@ -1,0 +1,1 @@
+Step projects that I completed during my studies at Den IT
