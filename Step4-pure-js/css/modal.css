@@ -1,0 +1,91 @@
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity .5s;
+}
+
+.modal {
+    min-width: 25em;
+}
+
+.modal__title {
+    padding: 0.5em 1em;
+    position: relative;
+    font-size: 1em;
+    line-height: 1.25em;
+    background-color: #9f9;
+    font-weight: bold;
+}
+.modal__title > span {
+    font-weight: bold;
+}
+
+.modal__close-btn {
+    display: block;
+    position: absolute;
+    top: 0.25em;
+    right: 0.25em;
+    width: 1.75em;
+    height: 1.75em;
+    background: transparent;
+    border: 2px solid #333;
+    border-radius: 1.2em;
+    background: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g><path id="Vector" d="M18 18L12 12M12 12L6 6M12 12L18 6M12 12L6 18" stroke="%23333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>') no-repeat center;
+    background-size: cover;
+    transition: transform 0.3s;
+}
+.modal__close-btn:hover {
+    transform: rotate(180deg);
+}
+
+.modal__form {
+    padding: 0.5em 1em;
+    background-color: #fff;
+    max-height: calc(100vh - 5em);
+    overflow-y: auto;
+}
+
+.modal__form-label {
+    display: block;
+    font-size: 0.85em;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.modal__form-input, .modal__form-select, .modal__form-textarea {
+    display: block;
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 1px solid #373;
+    border-radius: 0.5em;
+    outline: none;
+}
+.modal__form-input:focus, .modal__form-select:focus, .modal__form-textarea:focus {
+    border-color: #559955;
+    box-shadow: 0 0 3px #559955;
+}
+
+.modal__form-button {
+    display: block;
+    margin: 1.5em auto 0 auto;
+    padding: 0.5em;
+    background-color: transparent;
+    border: 1px solid #337733;
+    border-radius: 0.5em;
+    transition: background-color .3s;
+    cursor: pointer;
+}
+.modal__form-button:hover {
+    background-color: #9f9;
+}
