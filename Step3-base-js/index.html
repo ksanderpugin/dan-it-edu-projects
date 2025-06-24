@@ -56,27 +56,27 @@
 		<div class="page-wrapper">
 			<main class="page-main">
 				<section class="sorting" hidden>
-					<p class="sorting__element sorting__title">СОРТУВАТИ:</p>
+					<p class="sorting__element sorting__title">SORT BY:</p>
 
 					<button
 						class="sorting__element sorting__btn sorting__btn--active"
 						type="button"
 					>
-						ЗА замовчуванням
+						default
 					</button>
 
 					<button class="sorting__element sorting__btn" type="button">
-						ЗА ПРІЗВИЩЕМ
+						Name
 					</button>
 
 					<button class="sorting__element sorting__btn" type="button">
-						ЗА ДОСВІДОМ
+						Expirience
 					</button>
 				</section>
 
 				<section class="trainers-cards">
 					<ul class="trainers-cards__container">
-						<!-- Контейнер для карток тренерів -->
+						<!-- Card contanier -->
 					</ul>
 				</section>
 			</main>
@@ -84,7 +84,7 @@
 			<aside class="sidebar" hidden>
 				<form class="sidebar__filters filters">
 					<fieldset class="filters__fieldset">
-						<legend class="filters__legend">НАПРЯМИ</legend>
+						<legend class="filters__legend">DIRECTIONS</legend>
 
 						<input
 							class="filters__input"
@@ -94,7 +94,7 @@
 							value="all"
 							checked
 						/>
-						<label for="all-direction" class="filters__label"> ВСІ </label>
+						<label for="all-direction" class="filters__label"> ALL </label>
 
 						<input
 							class="filters__input"
@@ -103,7 +103,7 @@
 							id="gym"
 							value="gym"
 						/>
-						<label for="gym" class="filters__label"> ТРЕНАЖЕРНИЙ ЗАЛ </label>
+						<label for="gym" class="filters__label"> GYM </label>
 
 						<input
 							class="filters__input"
@@ -113,7 +113,7 @@
 							value="fight club"
 						/>
 						<label for="fight-club" class="filters__label">
-							БІЙЦІВСЬКИЙ КЛУБ
+							FIGHT CLUB
 						</label>
 
 						<input
@@ -123,20 +123,20 @@
 							id="kids-club"
 							value="kids club"
 						/>
-						<label for="kids-club" class="filters__label"> ДИТЯЧИЙ КЛУБ </label>
+						<label for="kids-club" class="filters__label"> KIDS CLUB </label>
 
 						<input
 							class="filters__input"
 							type="radio"
 							name="direction"
 							id="swimming-pool"
-							value="swimming pool"
+							value="pool"
 						/>
-						<label for="swimming-pool" class="filters__label"> БАСЕЙН </label>
+						<label for="swimming-pool" class="filters__label"> POOL </label>
 					</fieldset>
 
 					<fieldset class="filters__fieldset">
-						<legend class="filters__legend">КАТЕГОРІЇ</legend>
+						<legend class="filters__legend">CATEGORIES</legend>
 
 						<input
 							class="filters__input"
@@ -146,7 +146,7 @@
 							value="all"
 							checked
 						/>
-						<label for="all-category" class="filters__label"> ВСІ </label>
+						<label for="all-category" class="filters__label"> ALL </label>
 
 						<input
 							class="filters__input"
@@ -155,7 +155,7 @@
 							id="master"
 							value="master"
 						/>
-						<label for="master" class="filters__label"> МАЙСТЕР </label>
+						<label for="master" class="filters__label"> MASTER </label>
 
 						<input
 							class="filters__input"
@@ -164,7 +164,7 @@
 							id="specialist"
 							value="specialist"
 						/>
-						<label for="specialist" class="filters__label"> СПЕЦІАЛІСТ </label>
+						<label for="specialist" class="filters__label"> SPECIALIST </label>
 
 						<input
 							class="filters__input"
@@ -173,10 +173,10 @@
 							id="instructor"
 							value="instructor"
 						/>
-						<label for="instructor" class="filters__label"> ІНСТРУКТОР </label>
+						<label for="instructor" class="filters__label"> INSTRUCTOR </label>
 					</fieldset>
 
-					<input type="submit" value="ПОКАЗАТИ" class="filters__submit" />
+					<input type="submit" value="SHOW" class="filters__submit" />
 				</form>
 			</aside>
 		</div>
@@ -196,18 +196,17 @@
 						height="360"
 					/>
 					<div class="modal__description">
-						<p class="modal__name">Мануйленко Артем</p>
+						<p class="modal__name">James Anderson</p>
 						<p class="modal__point modal__point--category">
-							Категорія: інструктор
+							Category: instructor
 						</p>
-						<p class="modal__point modal__point--experience">Досвід: 8 років</p>
+						<p class="modal__point modal__point--experience">Experience: 8 years</p>
 						<p class="modal__point modal__point--specialization">
-							Напрям тренера: Тренажерний зал
+							Trainer's area: Gym
 						</p>
 						<p class="modal__text">
-							Артем спеціалізується на функціональному тренуванні. Він розробив
-							власну систему вправ для зміцнення корпусу. Його учні завжди
-							отримують видимі результати.
+							James specializes in functional training. He has developed his own system of exercises 
+							to strengthen the body. His students always get visible results.
 						</p>
 					</div>
 
@@ -236,9 +235,9 @@
 					width="280"
 					height="300"
 				/>
-				<p class="trainer__name">Мануйленко Артем</p>
+				<p class="trainer__name">James Anderson</p>
 
-				<button class="trainer__show-more" type="button">ПОКАЗАТИ</button>
+				<button class="trainer__show-more" type="button">MORE INFO</button>
 			</li>
 		</template>
 

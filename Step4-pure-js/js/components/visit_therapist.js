@@ -11,13 +11,13 @@ export class VisitTherapist extends Visit {
     createNode() {
         const node = super.createNode();
         node.querySelector('.visit-card__info').append(
-            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>Вік:</span>${this.age}`})
+            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>Age:</span>${this.age}`})
         );
         node.querySelector('.visit-card__title').style.backgroundColor = '#ccffcc';
         return node;
     }
 
     getCardTitle() {
-        return 'Візит до терапевта';
+        return 'Visit to a therapist';
     }
 }

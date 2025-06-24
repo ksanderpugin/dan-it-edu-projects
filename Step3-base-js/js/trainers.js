@@ -6,16 +6,6 @@ const Trainers = {
     filterDirection: localStorage.getItem('filterDirection') ?? "all",
     filterCategory: localStorage.getItem('filterCategory') ?? "all",
     
-    nameIds: {
-        "басейн": "swimming pool",
-        "тренажерний зал": "gym",
-        "дитячий клуб": "kids club",
-        "бійцівський клуб": "fight club",
-        "майстер": "master",
-        "спеціаліст": "specialist",
-        "інструктор": "instructor"
-    },
-    
 
     renderCards: function(sortOnly = false) {
 
@@ -34,7 +24,7 @@ const Trainers = {
             const img = cardItem.querySelector('img');
             img.src = trainerInfo.photo;
             images.push(img);
-            cardItem.querySelector('p').textContent = trainerInfo['last name'] + ' ' + trainerInfo['first name'];
+            cardItem.querySelector('p').textContent = trainerInfo['first name'] + ' ' + trainerInfo['last name'];
             cardItem.querySelector('button').addEventListener('click', Trainers.showModalTrainerInfo)
             fragment.appendChild(cardItem);
         });
@@ -56,10 +46,10 @@ const Trainers = {
             const modalTemplate = document.getElementById('modal-template');
             const modal = modalTemplate.content.cloneNode(true);
             modal.querySelector('img').src = cardInfo.photo;
-            modal.querySelector('.modal__name').textContent = cardInfo['last name'] + ' ' + cardInfo['first name'];
-            modal.querySelector('.modal__point--category').textContent = 'Категорія: ' + cardInfo.category;
-            modal.querySelector('.modal__point--experience').textContent = 'Досвід: ' + cardInfo.experience;
-            modal.querySelector('.modal__point--specialization').textContent = 'Напрям тренера:  ' + cardInfo.specialization;
+            modal.querySelector('.modal__name').textContent = cardInfo['first name'] + ' ' + cardInfo['last name'];
+            modal.querySelector('.modal__point--category').textContent = 'Category: ' + cardInfo.category;
+            modal.querySelector('.modal__point--experience').textContent = 'Experience: ' + cardInfo.experience;
+            modal.querySelector('.modal__point--specialization').textContent = 'Direction:  ' + cardInfo.specialization;
             modal.querySelector('.modal__text').textContent = cardInfo.description;
         
             modal.querySelector('.modal__close').addEventListener('click', event => {
@@ -77,10 +67,10 @@ const Trainers = {
         
         switch (Trainers.sortName.toUpperCase()) {
         
-            case 'ЗА ПРІЗВИЩЕМ':
-                return a['last name'].localeCompare(b['last name'], 'uk');
+            case 'NAME':
+                return a['first name'].localeCompare(b['first name'], 'en');
 
-            case 'ЗА ДОСВІДОМ':
+            case 'EXPIRIENCE':
                 return +a.experience.split(' ')[0] < +b.experience.split(' ')[0] ? 1 : -1;
 
             default:
@@ -91,8 +81,8 @@ const Trainers = {
 
     filter: function(cardItem) { // function for Array.filter (filtered cards by category and dirction)
         
-        const itemDirection = Trainers.nameIds[cardItem.specialization.toLowerCase()];
-        const itemCategory = Trainers.nameIds[cardItem.category.toLowerCase()];
+        const itemDirection = cardItem.specialization.toLowerCase();
+        const itemCategory = cardItem.category.toLowerCase();
         
         return (Trainers.filterDirection === itemDirection || Trainers.filterDirection === 'all') 
                 && 

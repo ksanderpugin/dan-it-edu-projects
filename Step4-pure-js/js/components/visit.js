@@ -78,10 +78,10 @@ export class Visit {
 
         const info = createElement({tagName: 'div', classList: ['visit-card__info'], dataset: {show: 'false'}});
         info.append(
-            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>мета візиту:</span>${this.title}`}),
-            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>Опис:</span>${this.description}`}),
-            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>Терміновість:</span>${this.urgencyUA}`}),
-            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>ПІБ:</span>${this.name}`}),
+            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>Title:</span>${this.title}`}),
+            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>Description:</span>${this.description}`}),
+            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>Urgency:</span>${this.urgencyStr}`}),
+            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>Name:</span>${this.name}`}),
         );
 
         const actions = createElement({tagName: 'div', classList: ['visit-card__actions']});
@@ -105,11 +105,11 @@ export class Visit {
         return node;
     }
 
-    get urgencyUA() {
+    get urgencyStr() {
         const words = {
-            normal: 'звичайна',
-            priority: 'пріоритетна',
-            high: 'невідкладна'
+            normal: 'ordinary',
+            priority: 'priority',
+            high: 'urgent'
         }
         return words[this.urgency];
     }

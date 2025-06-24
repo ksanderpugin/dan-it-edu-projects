@@ -15,8 +15,8 @@ const Loader = {
     },
 
     show: (checkElements = []) => {
-        this.loaderWrapper.style.display = 'flex';
         if (checkElements.length > 0) {
+            this.loaderWrapper.style.display = 'flex';
             setTimeout(Loader.checkElementsAndHide, 500, checkElements);
         }
     },

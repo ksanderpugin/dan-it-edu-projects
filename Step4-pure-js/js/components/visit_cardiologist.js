@@ -14,15 +14,15 @@ export class VisitCardiologist extends Visit {
     createNode() {
         const node = super.createNode();
         node.querySelector('.visit-card__info').append(
-            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>Звичайний тиск:</span>${this.pressure}`}),
-            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>Індекс маси тіла:</span>${this.wi}`}),
-            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>Перенесені захворювання серцево-судинної системи:</span>${this.previous}`}),
-            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>Вік:</span>${this.age}`})
+            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>Normal pressure:</span>${this.pressure}`}),
+            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>BMI:</span>${this.wi}`}),
+            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>Past cardiovascular diseases:</span>${this.previous}`}),
+            createElement({tagName: 'p', classList: ['visit-card__info-item'], html: `<span>Age:</span>${this.age}`})
         );
         return node;
     }
 
     getCardTitle() {
-        return 'Візит до кардіолога';
+        return 'Visit to a cardiologist';
     }
 }

@@ -38,11 +38,11 @@ loginButton.addEventListener('click', () => {
             list = new VisitList();
         } catch (error) {
             if (error.code === 0) {
-                NotificationCenter.add('Помилка інтернет-з\'єднання', NotificationCenter.TYPE.ERROR);
+                NotificationCenter.add('Internet connection error', NotificationCenter.TYPE.ERROR);
             } else if (error.code === 401) {
-                NotificationCenter.add('Невірний E-mail або пароль', NotificationCenter.TYPE.ERROR);
+                NotificationCenter.add('Incorrect email or password', NotificationCenter.TYPE.ERROR);
             } else {
-                NotificationCenter.add('Помилка авторизації. Зверніться до адміністратора.', NotificationCenter.TYPE.ERROR);
+                NotificationCenter.add('Authorization error. Contact your administrator.', NotificationCenter.TYPE.ERROR);
                 console.error(`User auth error: ${error}`);
             }
         }
@@ -98,7 +98,7 @@ document.addEventListener('click', (e) => {
     
     // Delete card
     if (e.target.classList.contains('visit-card__actions-button--delete')) {
-        const confirmation = confirm('Видалити запис?');
+        const confirmation = confirm('Delete entry?');
         if (!confirmation) return;
         const visit = list.getVisitById(+e.target.closest('.visit-card').dataset.id);
         visit.delete().then(() => {
@@ -108,7 +108,7 @@ document.addEventListener('click', (e) => {
 
     // Set done
     if (e.target.classList.contains('visit-card__actions-button--done')) {
-        const confirmation = confirm('Завершити візит? Редагування після завершення неможливо!');
+        const confirmation = confirm('End the visit? Editing is not possible after completion!');
         if (!confirmation) return;
         const visit = list.getVisitById(+e.target.closest('.visit-card').dataset.id);
         visit.done = true;
